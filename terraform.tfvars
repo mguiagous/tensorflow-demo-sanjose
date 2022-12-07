@@ -4,27 +4,31 @@
 sever_count = 2
 #
 # Compartement OCID
-compartment_ocid = "ocid1.compartment.oc1........"
+compartment_ocid = "ocid1.compartment.oc1..aaaaaaaabliehdjgxojzrpisiode2ujuird3zgn5edvaitsn6x4aolvntsia"
+#
+# Availability Domain and Fault Domain Name
+availability_domain = "GqIF:PHX-AD-1"
+fault_domain        = "FAULT-DOMAIN-1"
 #
 # "ocid1.image.oc1........"
-image_ocid = "ocid1.image......"
+image_ocid = "ocid1.image.oc1.phx.aaaaaaaaos6adgpwq24wy4f2hnk2adadawkd2qs6nmtxjvh34r77riwrqarq"
 #
 # Display Name Prefix
 display_name_prefix = "1-Click-Demo"
 #
 # Public ssh key path
-ssh_public_key = "/home/opc/.ssh/ssh-key.pub"
+ssh_public_key = "/Users/mguiagou/.jenkins/cloudshellkey.pub"
 #
 # Private ssh key path
-ssh_private_key = "/home/mail2maham/.ssh/ssh-key"
+ssh_private_key = "/Users/mguiagou/.jenkins/cloudshellkey"
 #
 # Assigned Public IP
 assign_public_ipaddress = true
 #
 # Subnet OCID (DemoVCN)
-subnet_ocid = "ocid1.subnet......"
+subnet_ocid = "ocid1.subnet.oc1.phx.aaaaaaaa6zvlok2q43cu2yw3hjqtbmnr4m5axaw2tj75yq6xjg6aruc4tr4q"
 #
-network_security_group_id = "ocid1.networksecuritygroup......."
+network_security_group_id = "ocid1.networksecuritygroup.oc1.iad.aaaaaaaa5ew5x7qeu6adutpjeu5kaafsihf7xj4mpwqikhnw2tbn746thnda"
 #
 # Flag to turn on ssh access and configuraiton check
 is_testing_required = false
