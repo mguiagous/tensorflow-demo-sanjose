@@ -7,7 +7,8 @@ resource "oci_core_instance" "this" {
   availability_config {
     recovery_action = "RESTORE_INSTANCE"
   }
-  availability_domain = "OMvN:US-SANJOSE-1-AD-1"
+  availability_domain = var.availability_domain
+  fault_domain        = var.fault_domain  
   compartment_id      = var.compartment_ocid
   create_vnic_details {
     assign_private_dns_record = "true"
