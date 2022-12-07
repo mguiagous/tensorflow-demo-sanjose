@@ -23,7 +23,7 @@ resource "oci_core_instance" "this" {
   metadata = {
     ssh_authorized_keys = "${file(var.ssh_public_key)}"
   }
-  shape = "VM.Standard.E2.1.Micro"
+  shape = var.instance_shape
   source_details {
     source_id   = var.image_ocid
     source_type = "image"
