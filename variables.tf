@@ -10,4 +10,5 @@ variable "ssh_public_key" {}
 variable "is_testing_required" {}
 variable "is_website_installed" {}
 variable "is_loadbalancer_installed" {}
-
+variable "lb_min_bandwith_in_mgps" {}
+variable "lb_max_bandwith_in_mgps" {}
