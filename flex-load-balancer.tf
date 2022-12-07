@@ -10,7 +10,7 @@ resource "oci_load_balancer" "this" {
   subnet_ids = [
     var.subnet_ocid
   ]
-
+  
   shape = "flexible"
   shape_details {
     minimum_bandwidth_in_mbps = var.lb_min_bandwith_in_mgps
