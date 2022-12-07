@@ -4,8 +4,7 @@ resource "null_resource" "create-inventory" {
 
   # Create inventory
   provisioner "local-exec" {
-    command = "ls -ltr"
-    #command = "echo ${oci_core_instance.this.*.public_ip[0]} >> ansible-src/tf_inventory.yaml; echo ${oci_core_instance.this.*.public_ip[1]} >> ansible-src/tf_inventory.yaml"
+    command = "echo ${oci_core_instance.this.*.public_ip[0]} >> tf_inventory.yaml; echo ${oci_core_instance.this.*.public_ip[1]} >> tf_inventory.yaml"
   }
 }
 
@@ -15,6 +14,6 @@ resource "null_resource" "run-ansible-playbook" {
 
   # Create inventory
   provisioner "local-exec" {
-    command = "cd ansible-src; ./my-playbook.sh"
+    command = "sh my-playbook.sh"
   }
 }
