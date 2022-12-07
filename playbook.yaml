@@ -44,21 +44,21 @@
       pwd
       ls -ltr
       cd /home/opc/downloads/
-      echo -e "\n Present working directory is" 
+      echo -e "\n Current working directory is: " 
       pwd
       ls -ltr
-      echo -e "\n Copying file 1: OnClick.pdg"
-      wget https://objectstorage.us-sanjose-1.oraclecloud.com/p/jImdRx1ENKE3N7xNXdZAByASa5h43cUxgjllSW4jVW3JLdzvPqnqkYAAUxm_9XbX/n/ax1qybrxcvtj/b/web-sites/o/OneClick.pdf
-      echo -e "\n Copying file 2: oracleacademy.jpg"
-      wget https://objectstorage.us-sanjose-1.oraclecloud.com/p/BwkaCWFiKaHObvm9hPbiAa6ME6mWPTMwULZXkrtJ--4UT5YvMoHwhyB2gdTnisAi/n/ax1qybrxcvtj/b/web-sites/o/oracleacademy.jpg
+      echo -e "\n Copying file 1: oneclick.pdf"
+      wget https://objectstorage.us-sanjose-1.oraclecloud.com/p/V-57PIESHhnVE3qqKCd3e7pSn88ypOYiNEIb6p6aKJcUMtYDByITmuuy1kc2WFsS/n/ax1qybrxcvtj/b/tensor-flow-aiml-bucket/o/oneclick.pdf
+      echo -e "\n Copying file 2: oracleacademylandoaiml.jpg"
+      wget https://objectstorage.us-sanjose-1.oraclecloud.com/p/5Xtut-fy4is4w8JLK2ahYjbNzXNIbfBMxdaGlJQUgSGGy1QMsd-Qc6m9616qv43v/n/ax1qybrxcvtj/b/tensor-flow-aiml-bucket/o/oracleacademylandoaiml.jpg
       echo -e "\n Copying file 3: poweredbyoci.jpg"
-      wget https://objectstorage.us-sanjose-1.oraclecloud.com/p/pVBNeImQ9CihP6cv0O1vQi0eBg6xIDDamBymkzR5oWP33jZnyx30OcxV_Sq3E_Zs/n/ax1qybrxcvtj/b/web-sites/o/poweredbyoci.jpg
+      wget https://objectstorage.us-sanjose-1.oraclecloud.com/p/7TBt3KotqKRnsC6Y8GQ-mcvsbBxbhLwyELkEG2z2PnmXHlGsOhSA6554zh8tgrls/n/ax1qybrxcvtj/b/tensor-flow-aiml-bucket/o/poweredbyoci.jpg      
       echo -e "\n Copying file 4: tensorflowdemo.gif"
-      wget https://objectstorage.us-sanjose-1.oraclecloud.com/p/TR9EGYEDNsEVZcwIwK1caX1TrCiil29fqMtFPSronlLgMBwCaonlh07sm1vV0wxc/n/ax1qybrxcvtj/b/web-sites/o/tensorflowdemo.gif
+      wget https://objectstorage.us-sanjose-1.oraclecloud.com/p/gYKaBaGhSCmKzyKBvZon9s8rYaiK2415SaeRI8MtiIBRqD0pEg_nKrmfI16NNogF/n/ax1qybrxcvtj/b/tensor-flow-aiml-bucket/o/tensorflowdemo.gif
       pwd
       ls -ltr
       echo -e "\n Copying file 4: create_website_index_html.sh"
-      wget https://objectstorage.us-sanjose-1.oraclecloud.com/p/r4MOHD2Zj4ORjGOd8-m7gd9NY8Wkvrlqptnk7eeLf3-HuLLnLBtnYqVg4WlHrWGG/n/ax1qybrxcvtj/b/web-sites/o/create_website_index_html.sh
+      wget https://objectstorage.us-sanjose-1.oraclecloud.com/p/zoxU5qGiiInOYcc_m98YSV0elMKnKUOmGmBT4UbIdhZ2J5FeV8UE7sWYWCXH5urv/n/ax1qybrxcvtj/b/tensor-flow-aiml-bucket/o/create_website_index_html.sh
       pwd
       ls -ltr
       echo -e '====> Verify if the installer script is downloaded'
@@ -77,7 +77,7 @@
       if [ -f "/var/www/html/index.html" ];
       then
         echo -e '====> An index.html file exists - remove it before crteating a new one.'
-        rm /var/www/html/index.html
+        rm -r /var/www/html/index.html
       fi
       echo -e '====> Executing the script to create html.index'
       sh /home/opc/downloads/create_website_index_html.sh
@@ -88,7 +88,7 @@
       if [ -d "/var/www/html/images" ];
       then
         echo -e '====> An images directory exists - remove it before crteating a new one.'
-        rm /var/www/html/images
+        rm -r /var/www/html/images
       fi
       echo -e '====> Now creating an images direvtory under /var/www/html ....'
       mkdir /var/www/html/images
@@ -97,20 +97,19 @@
       if [ -d "/var/www/html/labs" ];
       then
         echo -e '====> An labs directory exists - remove it before crteating a new one.'
-        rm /var/www/html/labs
+        rm -r /var/www/html/labs
       fi
       echo -e '====> Now creating a labs direvtory under /var/www/html ....'
       mkdir /var/www/html/labs
       pwd
       ls -ltr
       echo -e '====> Now Copying all used images files to website images directory'
-      cp /home/opc/downloads/oracleacademy.jpg  /var/www/html/images/oracleacademy.jpg
-      cp /home/opc/downloads/ets_logo.jpg  /var/www/html/images/ets_logo.jpg   
+      cp /home/opc/downloads/oracleacademylandoaiml.jpg  /var/www/html/images/oracleacademylandoaiml.jpg
       cp /home/opc/downloads/poweredbyoci.jpg /var/www/html/images/poweredbyoci.jpg
       cp /home/opc/downloads/tensorflowdemo.gif /var/www/html/images/tensorflowdemo.gif
       ls -ltr /var/www/html/images
       echo -e '====> Now Copying preentation file to website labs directory'
-      cp /home/opc/downloads/OneClick.pdf /var/www/html/labs/OneClick.pdf
+      cp /home/opc/downloads/oneclick.pdf /var/www/html/labs/oneclick.pdf
       ls -ltr /var/www/html/labs
      register: command_output 
      tags: command_output
