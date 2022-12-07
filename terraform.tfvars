@@ -7,11 +7,10 @@ sever_count = 2
 compartment_ocid = "ocid1.compartment.oc1..aaaaaaaabliehdjgxojzrpisiode2ujuird3zgn5edvaitsn6x4aolvntsia"
 #
 # Availability Domain and Fault Domain Name
-availability_domain = "GqIF:PHX-AD-1"
-fault_domain        = "FAULT-DOMAIN-1"
+availability_domain = "GqIF:US-ASHBURN-AD-1"
 #
 # "ocid1.image.oc1........"
-image_ocid = "ocid1.image.oc1.phx.aaaaaaaaos6adgpwq24wy4f2hnk2adadawkd2qs6nmtxjvh34r77riwrqarq"
+image_ocid = "ocid1.image.oc1.iad.aaaaaaaak6w63p4ddsxlh2hgqh2vycoivsdevwy2utwsqjxwcvsj4vfstlqa"
 #
 # Display Name Prefix
 display_name_prefix = "1-Click-Demo"
@@ -22,11 +21,13 @@ ssh_public_key = "/Users/mguiagou/.jenkins/cloudshellkey.pub"
 # Private ssh key path
 ssh_private_key = "/Users/mguiagou/.jenkins/cloudshellkey"
 #
+instance_shape = "VM.Standard2.1"
+#
 # Assigned Public IP
 assign_public_ipaddress = true
 #
 # Subnet OCID (DemoVCN)
-subnet_ocid = "ocid1.subnet.oc1.phx.aaaaaaaa6zvlok2q43cu2yw3hjqtbmnr4m5axaw2tj75yq6xjg6aruc4tr4q"
+subnet_ocid = "ocid1.subnet.oc1.iad.aaaaaaaa3xkqo475apqw2gb5gsxrrjopof3x2lka3nqhia7al2yxsv4lb7aa"
 #
 network_security_group_id = "ocid1.networksecuritygroup.oc1.iad.aaaaaaaa5ew5x7qeu6adutpjeu5kaafsihf7xj4mpwqikhnw2tbn746thnda"
 #
@@ -34,11 +35,9 @@ network_security_group_id = "ocid1.networksecuritygroup.oc1.iad.aaaaaaaa5ew5x7qe
 is_testing_required = false
 #
 # Flag to configure an appache web server and a demo website 
-is_website_installed = true
+is_website_installed = false
 #
-# Flag to configure a ffelxible load balancer for the demo website HA scenario 
+# Flag to configure a felxible load balancer and key parameters for the demo high availabilit scenario 
 is_loadbalancer_installed = true
-#
-# Flag to configure an appache web server and a demo website 
-lb_min_bandwith_in_mgps = 0
-lb_max_bandwith_in_mgps = 0
+lb_min_bandwith_in_mgps   = 10
+lb_max_bandwith_in_mgps   = 10
