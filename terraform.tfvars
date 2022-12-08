@@ -1,4 +1,5 @@
 # This is the only file to be maintained
+# This is the only file to be maintained
 #
 # Number of servers
 sever_count = 2
@@ -13,7 +14,10 @@ availability_domain = "GqIF:US-ASHBURN-AD-1"
 image_ocid = "ocid1.image.oc1.iad.aaaaaaaak6w63p4ddsxlh2hgqh2vycoivsdevwy2utwsqjxwcvsj4vfstlqa"
 #
 # Display Name Prefix
-display_name_prefix = "1-Click-Demo"
+display_name_prefix = "1-Click-LandoAIML"
+#
+# hostname
+instance_hostname_label = "1-click-landoaiml-demo"
 #
 # Public ssh key path
 ssh_public_key = "/Users/mguiagou/.jenkins/cloudshellkey.pub"
@@ -21,7 +25,7 @@ ssh_public_key = "/Users/mguiagou/.jenkins/cloudshellkey.pub"
 # Private ssh key path
 ssh_private_key = "/Users/mguiagou/.jenkins/cloudshellkey"
 #
-#instance_shape = "VM.Standard2.1"
+#instance_shape memory and number of CPU
 instance_shape         = "VM.GPU2.1"
 instance_memory_in_gbs = "72"
 instance_nb_of_ocpus   = "12"
@@ -41,6 +45,6 @@ is_testing_required = false
 is_website_installed = false
 #
 # Flag to configure a felxible load balancer and key parameters for the demo high availabilit scenario 
-is_loadbalancer_installed = true
-lb_min_bandwith_in_mgps   = 10
-lb_max_bandwith_in_mgps   = 10
+is_loadbalancer_installed = false
+lb_min_bandwith_in_mgps   = 100
+lb_max_bandwith_in_mgps   = 100
