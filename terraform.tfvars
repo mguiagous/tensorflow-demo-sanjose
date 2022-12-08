@@ -44,4 +44,5 @@ lb_min_bandwith_in_mgps   = 10
 lb_max_bandwith_in_mgps   = 10
 #
 # Flag to configure an appache web server and a demo website 
-is_website_installed = false
+is_website_installed = true
+
