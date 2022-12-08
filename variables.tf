@@ -1,7 +1,6 @@
 variable "sever_count" {}
 variable "compartment_ocid" {}
 variable "availability_domain" {}
-variable "fault_domain" {}
 variable "image_ocid" {}
 variable "display_name_prefix" {}
 variable "assign_public_ipaddress" {}
