@@ -21,7 +21,10 @@ ssh_public_key = "/Users/mguiagou/.jenkins/cloudshellkey.pub"
 # Private ssh key path
 ssh_private_key = "/Users/mguiagou/.jenkins/cloudshellkey"
 #
-instance_shape = "VM.Standard2.1"
+#instance_shape = "VM.Standard2.1"
+instance_shape         = "VM.GPU2.1"
+instance_memory_in_gbs = "72"
+instance_nb_of_ocpus   = "12"
 #
 # Assigned Public IP
 assign_public_ipaddress = true
