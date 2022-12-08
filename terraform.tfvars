@@ -17,7 +17,7 @@ image_ocid = "ocid1.image.oc1.iad.aaaaaaaak6w63p4ddsxlh2hgqh2vycoivsdevwy2utwsqj
 display_name_prefix = "1-Click-LandoAIML"
 #
 # hostname
-instance_hostname_label = "1-click-landoaiml-demo"
+# instance_hostname_label = "1-click-landoaiml-demo"
 #
 # Public ssh key path
 ssh_public_key = "/Users/mguiagou/.jenkins/cloudshellkey.pub"
