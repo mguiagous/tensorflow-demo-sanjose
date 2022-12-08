@@ -42,7 +42,7 @@ network_security_group_id = "ocid1.networksecuritygroup.oc1.iad.aaaaaaaa5ew5x7qe
 is_testing_required = false
 #
 # Flag to configure an appache web server and a demo website 
-is_website_installed = false
+is_website_installed = true
 #
 # Flag to configure a felxible load balancer and key parameters for the demo high availabilit scenario 
 is_loadbalancer_installed = false
