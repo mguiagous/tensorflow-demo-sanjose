@@ -2,7 +2,7 @@
 # This is the only file to be maintained
 #
 # Number of servers
-sever_count = 2
+sever_count = 0
 #
 # Compartement OCID
 compartment_ocid = "ocid1.compartment.oc1..aaaaaaaabliehdjgxojzrpisiode2ujuird3zgn5edvaitsn6x4aolvntsia"
@@ -39,12 +39,12 @@ subnet_ocid = "ocid1.subnet.oc1.iad.aaaaaaaa3xkqo475apqw2gb5gsxrrjopof3x2lka3nqh
 network_security_group_id = "ocid1.networksecuritygroup.oc1.iad.aaaaaaaa5ew5x7qeu6adutpjeu5kaafsihf7xj4mpwqikhnw2tbn746thnda"
 #
 # Flag to turn on ssh access and configuraiton check
-is_testing_required = true
+is_testing_required = false
 #
 # Flag to configure an appache web server and a demo website 
-is_website_installed = true
+is_website_installed = false
 #
 # Flag to configure a felxible load balancer and key parameters for the demo high availabilit scenario 
-is_loadbalancer_installed = true
+is_loadbalancer_installed = false
 lb_min_bandwith_in_mgps   = 10
 lb_max_bandwith_in_mgps   = 10
