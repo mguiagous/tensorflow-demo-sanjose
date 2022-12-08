@@ -18,7 +18,7 @@ resource "oci_core_instance" "this" {
     subnet_id                 = var.subnet_ocid
   }
   
-  display_name = "${var.display_name_prefix} Server ${count.index + 1}"
+  display_name = "${var.display_name_prefix}-Server${count.index + 1}"
   
   instance_options {
     are_legacy_imds_endpoints_disabled = "false"
