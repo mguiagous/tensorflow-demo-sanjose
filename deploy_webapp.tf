@@ -14,6 +14,6 @@ resource "null_resource" "run-ansible-playbook" {
 
   # Create inventory
   provisioner "local-exec" {
-    command = "sh /Users/mguiagou/terraform-ws/demo/tensorflow-demo-sanjose/my-playbook.sh"
+    command = "./Users/mguiagou/terraform-ws/demo/tensorflow-demo-sanjose/my-playbook.sh"
   }
 }
