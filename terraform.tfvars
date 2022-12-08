@@ -2,7 +2,7 @@
 # This is the only file to be maintained
 #
 # Number of servers
-sever_count = 2
+sever_count = 0
 #
 # Compartement OCID
 compartment_ocid = "ocid1.compartment.oc1..aaaaaaaabliehdjgxojzrpisiode2ujuird3zgn5edvaitsn6x4aolvntsia"
@@ -45,6 +45,6 @@ is_testing_required = true
 is_website_installed = false
 #
 # Flag to configure a felxible load balancer and key parameters for the demo high availabilit scenario 
-is_loadbalancer_installed = true
+is_loadbalancer_installed = false
 lb_min_bandwith_in_mgps   = 10
 lb_max_bandwith_in_mgps   = 10
