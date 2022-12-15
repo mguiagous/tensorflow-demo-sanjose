@@ -1,3 +1,7 @@
+####################################
+#.   VARIBLES DEFINITION.         #
+####################################
+
 # Network  & Load Balancer Variables
 variable "vcn_cidr_block" {}
 variable "subnet_cidr_block" {}
@@ -8,6 +12,7 @@ variable "lb_max_bandwith_in_mgps" {}
 
 # Compute Instance Variables
 variable "availability_domain" {}
+#variable "availability_domain_number" {}
 variable "fault_domain_number" {}
 variable "sever_count" {}
 variable "compartment_ocid" {}
@@ -18,5 +23,3 @@ variable "ssh_private_key" {}
 variable "ssh_public_key" {}
 variable "is_testing_required" {}
 variable "is_website_installed" {}
-
-
