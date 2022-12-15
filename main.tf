@@ -20,7 +20,7 @@ resource "oci_core_instance" "this" {
   }
   
   availability_domain = var.availability_domain
-  fault_domain = (var.ne  != 0) ? lookup(local.fds[abs(var.fault_domain_number - 1)], "name") : lookup(local.fds[count.index % floor(min(2, 3))], "name")
+  fault_domain = (var.availability_domain  != 0) ? lookup(local.fds[abs(var.fault_domain_number - 1)], "name") : lookup(local.fds[count.index % floor(min(2, 3))], "name")
 
   compartment_id      = var.compartment_ocid
   create_vnic_details {
