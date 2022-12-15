@@ -24,24 +24,23 @@ subnet_cidr_block = "10.0.1.0/24"
 sever_count = 2
 #
 # Avaialability Domain and fault domain number
-availability_domain = "OMvN:US-SANJOSE-1-AD-1"
-fault_domain_number = 3
+availability_domain = ""
+fault_domain_number = 0
 #
 # Compartement OCID
-compartment_ocid = "ocid1.compartment.oc1..aaaaaaaa6gcfbr325xdlw7j6dbko6psl3itjnjsohlk3zaoshxx4szo533fq"
+compartment_ocid = ""
 #
-# "ocid1.image.oc1.us-sanjose-1.aaaaaaaanypljfcdl4wj7wfqcfradpzgzazdbvpntl36zk3bcktoqyzcf4ma"
-image_ocid = "ocid1.image.oc1.us-sanjose-1.aaaaaaaacxrlqz7bdlqobvtfxnrlz7f77wai4k4v6exvpcsfpift6qhctkfq"
+image_ocid = ""
 #
 # Display Name Prefix and host/dns name prefix
 display_name_prefix = "One Click Lando Tech"
 host_name_prefix = "onecliclt"
 #
 # Public ssh key path
-ssh_public_key = "/home/mail2maham/.ssh/cloudshellkey.pub"
+ssh_public_key = "~/.ssh/cloudshellkey.pub"
 #
 # Private ssh key path
-ssh_private_key = "/home/mail2maham/.ssh/cloudshellkey"
+ssh_private_key = "~/.ssh/cloudshellkey"
 #
 # Assigned Public IP
 assign_public_ipaddress = true
