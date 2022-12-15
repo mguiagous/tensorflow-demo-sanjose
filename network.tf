@@ -1,5 +1,4 @@
-
-## This configuration was infered from a ORM generated code by terraform-provider-oci
+## This Network configuration was infered from a ORM generated code by terraform-provider-oci
 
 # Core VCN
 resource oci_core_vcn this { 
