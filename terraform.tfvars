@@ -28,9 +28,9 @@ availability_domain = ""
 fault_domain_number = 0
 #
 # Compartement OCID
-compartment_ocid = ""
+compartment_ocid = "ocid1.compartment.oc1..aaaaaaaagz3uh4bte5xw5nu3mxpxyegtpuuq5cmom5gooh7rcdajy5tncmea"
 #
-image_ocid = ""
+image_ocid = "ocid1.image.oc1.iad.aaaaaaaak6w63p4ddsxlh2hgqh2vycoivsdevwy2utwsqjxwcvsj4vfstlqa"
 #
 # Display Name Prefix and host/dns name prefix
 display_name_prefix = "One Click Lando Tech"
