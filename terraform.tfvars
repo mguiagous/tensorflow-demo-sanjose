@@ -1,5 +1,5 @@
-# This is the only file to be maintained
-#
+# This is the only file to be maintad 
+# Update with your own data
 
 ###################################
 # STEP 1 ===> CREATE CORE NETWORL #
