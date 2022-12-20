@@ -26,8 +26,8 @@ sever_count = 0
 # Avaialability Domain and fault domain number
 availability_domain = "XxXX:US-ASHBURN-AD-1"
 availability_domain_number = 0
-fault_domain_number = 0
 fault_domain = "FAULT-DOMAIN-1"
+fault_domain_number = 0
 #
 # Compartement OCID
 compartment_ocid = "ocid1.compartment.oc1..aaaaaaaa....."
