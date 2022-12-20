@@ -1,4 +1,4 @@
-# This is the only file to be maintad 
+# This is the main configuration file to maintain
 # Update with your own data
 
 ###################################
@@ -46,8 +46,18 @@ ssh_private_key = "~/.ssh/cloudshellkey"
 assign_public_ipaddress = true
 
 
+###########################################################
+# STEP 3 ===> INSTALL LB & POINT TO THE 2 VMs/Web Servers #
+###########################################################
+# 
+# Flag to configure a felxible load balancer and parameters values 
+is_loadbalancer_installed = false
+lb_min_bandwith_in_mgps = 10
+lb_max_bandwith_in_mgps = 10
+
+
 ###################################
-# STEP 3 ===> TEST SSH TO SERVERS #
+# STEP 4 ===> TEST SSH TO SERVERS #
 ###################################
 #
 # Flag to turn on ssh access and configuraiton check
@@ -55,18 +65,20 @@ is_testing_required = false
 
 
 ###################################################
-# STEP 4 ===> INSTALL APPACHE & CONFIGURE WEB APP #
+# STEP 5 ===> INSTALL APPACHE & CONFIGURE WEB APP #
 ###################################################
 #
 # Flag to configure an appache web server and a demo website 
 is_website_installed = false
 
 
-########################################################
-# STEP 5 ===> INSTALL LB & POINT TO THE 2 WEB SERCVERS #
-########################################################
-# 
-# Flag to configure a felxible load balancer and set bandwith min and max values 
-is_loadbalancer_installed = false
-lb_min_bandwith_in_mgps = 10
-lb_max_bandwith_in_mgps = 10
+##################################################
+# STEP 6 ===> CHECK THE LB HEALTH STATE IS GREEN #
+##################################################
+#
+# Check the web application demo website (http://public_ip_address_of_load_balacer) 
+
+
+################################################
+# STEP 7 ===> WHEN DONE DESTROY ALL RESSOURCES #
+################################################
