@@ -4,7 +4,6 @@ resource "null_resource" "create-inventory" {
 
   # Create inventory
   provisioner "local-exec" {
-    #command = "ls -ltr"
     command = "sh ~/tensorflow-demo-sanjose/create_inventory_file.sh ; echo ${oci_core_instance.this.*.public_ip[0]} >> ~/tensorflow-demo-sanjose/tf_inventory.yaml; echo ${oci_core_instance.this.*.public_ip[1]} >> ~/tensorflow-demo-sanjose/tf_inventory.yaml"
   }
 }
