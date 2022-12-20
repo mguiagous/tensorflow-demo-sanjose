@@ -2,10 +2,10 @@
 # Update with your own data
 
 ###################################
-# STEP 1 ===> CREATE CORE NETWORL #
+# STEP 1 ===> CREATE CORE NETWORK #
 ###################################
 
-# Core Network & Load Balancer
+# Core Network - Load Balancer not included
 #
 # Exisiting Subnet & NSG OCIDs(DemoVCN)
 #subnet_ocid = "ocid1.subnet.oc1.us-sanjose-1.aaaa....."
@@ -63,10 +63,10 @@ is_website_installed = false
 
 
 ########################################################
-# STEP 4 ===> INSTALL LB & POINT TO THE 2 WEB SERCVERS #
+# STEP 5 ===> INSTALL LB & POINT TO THE 2 WEB SERCVERS #
 ########################################################
 # 
-# Flag to configure a felxible load balancer and parameters values 
+# Flag to configure a felxible load balancer and set bandwith min and max values 
 is_loadbalancer_installed = false
 lb_min_bandwith_in_mgps = 10
 lb_max_bandwith_in_mgps = 10
