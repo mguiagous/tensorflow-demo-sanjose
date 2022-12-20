@@ -24,8 +24,10 @@ subnet_cidr_block = "10.0.1.0/24"
 sever_count = 0
 #
 # Avaialability Domain and fault domain number
-availability_domain = ""
+availability_domain = "XxXX:US-ASHBURN-AD-1"
+availability_domain_number = 0
 fault_domain_number = 0
+fault_domain = "FAULT-DOMAIN-1"
 #
 # Compartement OCID
 compartment_ocid = "ocid1.compartment.oc1..aaaaaaaa....."
