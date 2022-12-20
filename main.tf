@@ -1,20 +1,18 @@
 provider "oci" {}
 
-/*
 
 data "oci_identity_availability_domains" "ads" {
     compartment_id = var.compartment_ocid
 }
 
-*/
-
 data "oci_identity_fault_domains" "fds" {
+    #availability_domain = (var.availability_domain_number != 0) ? lookup(local.ads[abs(var.availability_domain_number - 1)], "name") : lookup(local.ads[count.index % floor(min(2, 3))], "name")
     availability_domain = var.availability_domain
     compartment_id = var.compartment_ocid
 }
 
 locals {
-  #ads = data.oci_identity_availability_domains.ads.availability_domains
+  ads = data.oci_identity_availability_domains.ads.availability_domains
   fds = data.oci_identity_fault_domains.fds.fault_domains
 }
 
@@ -27,10 +25,10 @@ resource "oci_core_instance" "this" {
     recovery_action = "RESTORE_INSTANCE"
   }
   
-  #availability_domain = (var.availability_domain_number != 0) ? lookup(local.ads[abs(var.availability_domain_number - 1)], "name") : lookup(local.ads[count.index % floor(min(2, 3))], "name")
-  availability_domain = var.availability_domain
+  availability_domain = (var.availability_domain_number != 0) ? lookup(local.ads[abs(var.availability_domain_number - 1)], "name") : lookup(local.ads[count.index % floor(min(2, 3))], "name")
+  #availability_domain = var.availability_domain
   fault_domain = (var.fault_domain_number != 0) ? lookup(local.fds[abs(var.fault_domain_number - 1)], "name") : lookup(local.fds[count.index % floor(min(2, 3))], "name")
-
+  
   compartment_id      = var.compartment_ocid
   create_vnic_details {
     assign_private_dns_record = "true"
