@@ -27,5 +27,10 @@ variable "display_name_prefix" {}
 variable "assign_public_ipaddress" {}
 variable "ssh_private_key" {}
 variable "ssh_public_key" {}
+variable "instance_shape" {}
+variable "instance_memory_in_gbs" {}
+variable "instance_nb_of_ocpus" {}
+
+# Web Application flag variables
 variable "is_testing_required" {}
-variable "is_website_installed" {}
+variable "is_website_installed" {} 
