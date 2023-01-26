@@ -9,6 +9,7 @@ locals {
   fds = data.oci_identity_fault_domains.fds.fault_domains
 }
 
+
 resource "oci_core_instance" "this" {
 
   #count = var.sever_count
@@ -36,6 +37,7 @@ resource "oci_core_instance" "this" {
   }
     
   is_pv_encryption_in_transit_enabled = "true"
+    
   metadata = {
     ssh_authorized_keys = "${file(var.ssh_public_key)}"
   }
