@@ -2,13 +2,16 @@
 resource "oci_load_balancer" "this" {
   depends_on = [oci_core_instance.this]
 
-  compartment_id = var.compartment_ocid
+  #compartment_id = var.compartment_ocid
+  compartment_id = oci_identity_compartment.this.id
+
   count          = (var.is_loadbalancer_installed) ? 1 : 0
 
   display_name               = "${var.display_name_prefix}-LB"
+  
   network_security_group_ids = [oci_core_network_security_group.this.id ] #[var.network_security_group_id]
 
-  subnet_ids = [ oci_core_subnet.My-Public-Subnet.id ] ##var.subnet_ocid
+  subnet_ids = [ oci_core_subnet.My-Public-Subnet.id ] #var.subnet_ocid
 
   shape = "flexible"
   shape_details {
