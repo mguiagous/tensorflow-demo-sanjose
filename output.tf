@@ -1,3 +1,6 @@
+# Compartment
+output "new_compartment_ocid" { value = oci_identity_compartment.this.*.id }
+
 # Network Output
 output "core_vcn_ocid" { value = oci_core_vcn.this.*.id }
 output "core_nsg_ocid" { value = oci_core_network_security_group.this.id }
