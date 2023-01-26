@@ -6,7 +6,7 @@
 ########################################
 #
 # Root or Parent Compartement OCID
-compartment_ocid              = "ocid1.compartment.oc1..aaaaaaaao"
+compartment_ocid              = "ocid1.compartment.oc1..aaaaaaaao"  # Update with your own value
 compartment_name              = "Demo-1AD-Compartment"
 compartment_description       = "Demo Child Single AD Compartment"
 compartment_delete_on_destroy = true
@@ -17,13 +17,14 @@ compartment_delete_on_destroy = true
 
 # Core Network - Load Balancer not included
 #
-# Exisiting Subnet & NSG OCIDs(DemoVCN)
+# Exisiting Subnet & NSG OCIDs(DemoVCN) - these value need to be updated with your own data
 subnet_ocid = "ocid1.subnet.oc1.us-sanjose-1.aaaa....."
 network_security_group_id = "ocid1.networksecuritygroup.oc1.us-sanjose-1.aaaaaaaah....."
 #
 # New VCN & Subnet CIDR Blocks
 vcn_cidr_block = "10.0.0.0/16"
 subnet_cidr_block = "10.0.1.0/24"
+
 
 ###################################
 # STEP 2 ===> CREATE 2 SERVERS/VM #
@@ -32,10 +33,11 @@ subnet_cidr_block = "10.0.1.0/24"
 # Number of Servers (Virtual Machines)
 sever_count = 0
 #
-# Avaialability Domain and fault domain number
-availability_domain = "XxXX:US-ASHBURN-AD-1"
+# Avaialability Domain (need update with local value) and fault domain number
+availability_domain = "XxXX:US-XXX-AD-1"
 fault_domain_number = 0
 #
+# OS Image OCID (this has to be updated with your own value)
 image_ocid = "ocid1.image.oc1.iad.aaaaaaaa......"
 #
 # Display Name Prefix and host/dns name prefix
@@ -85,6 +87,8 @@ is_website_installed = false
 # Check the web application demo website 
 # Run curl http://public_ip_address_of_load_balacer
 
+
 ################################################
 # STEP 7 ===> WHEN DONE DESTROY ALL RESSOURCES #
 ################################################
+
