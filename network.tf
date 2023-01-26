@@ -9,6 +9,7 @@ resource oci_core_vcn this {
   dns_label    = "${var.host_name_prefix}core"
 }
 
+
 # Internet Gateway
 resource oci_core_internet_gateway this {  
   #compartment_id = var.compartment_ocid
@@ -17,6 +18,7 @@ resource oci_core_internet_gateway this {
   enabled      = "true"
   vcn_id = "${oci_core_vcn.this.id}"
 }
+
 
 # Default Routing Table
 resource oci_core_default_route_table this { 
@@ -32,6 +34,7 @@ resource oci_core_default_route_table this {
   }
 }
 
+
 # Network Security Group
 resource oci_core_network_security_group this {
   #compartment_id = var.compartment_ocid
@@ -39,6 +42,7 @@ resource oci_core_network_security_group this {
   display_name = "${var.display_name_prefix} Network Security Group"
   vcn_id = oci_core_vcn.this.id
 }
+
 
 # Network Security Group Rule
 resource oci_core_network_security_group_security_rule this {
@@ -62,6 +66,7 @@ resource oci_core_network_security_group_security_rule this {
   }
 }
 
+
 # Default DHCP Options 
 resource oci_core_default_dhcp_options Default-DHCP-Options {
   #compartment_id = var.compartment_ocid
@@ -81,6 +86,7 @@ resource oci_core_default_dhcp_options Default-DHCP-Options {
     type = "SearchDomain"
   }
 }
+
 
 # Private Subnet Route Table
 resource oci_core_route_table Route-Table-for-My-Private-Subnet {
@@ -109,7 +115,7 @@ resource oci_core_subnet My-Private-Subnet {
   vcn_id = oci_core_vcn.this.id
 }
 
-
+    
 # Private Subnet Security List
 resource oci_core_security_list Security-List-for-My-Private-Subnet {
   #compartment_id = var.compartment_ocid
@@ -168,6 +174,7 @@ resource oci_core_security_list Security-List-for-My-Private-Subnet {
   vcn_id = oci_core_vcn.this.id
 }
 
+  
 # Default Security List 
 resource oci_core_default_security_list My-Default-Security-List {
   #compartment_id = var.compartment_ocid
