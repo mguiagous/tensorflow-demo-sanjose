@@ -2,6 +2,12 @@
 #.   VARIBLES DEFINITION.         #
 ####################################
 
+# Root and Chikd Compartment 
+variable "compartment_ocid" {}
+variable "compartment_description" {}
+variable "compartment_name" {}
+variable "compartment_delete_on_destroy" {}
+
 # Network  & Load Balancer Variables
 variable "vcn_cidr_block" {}
 variable "subnet_cidr_block" {}
@@ -16,7 +22,6 @@ variable "availability_domain_number" {}
 variable "fault_domain" {}
 variable "fault_domain_number" {}
 variable "sever_count" {}
-variable "compartment_ocid" {}
 variable "image_ocid" {}
 variable "display_name_prefix" {}
 variable "assign_public_ipaddress" {}
