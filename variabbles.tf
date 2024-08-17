@@ -2,7 +2,7 @@
 #.   VARIBLES DEFINITION.         #
 ####################################
 
-# Root and Chikd Compartment 
+# Root and Child Compartment 
 variable "compartment_ocid" {}
 variable "compartment_description" {}
 variable "compartment_name" {}
